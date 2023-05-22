@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,6 +9,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 <header>
     <div class="inner">
@@ -81,9 +83,9 @@
 <div class="wrap">
     <section class="top_box business03">
         <div class="top_txt">
-            <h2 class="tit">EDUCATION &<br/>BATTERY ACADEMY</h2>
+            <h2 class="tit">EDUCATION &<br />BATTERY ACADEMY</h2>
             <p class="txt">
-                2차전지에 대한 전문인력 양성을 위한<br/>
+                2차전지에 대한 전문인력 양성을 위한<br />
                 종합컨트롤타워를 구축하여 운영합니다
             </p>
         </div>
@@ -102,15 +104,15 @@
                     <li class="ready scroll_box">
                         <strong class="count">01</strong>
                         <p class="txt">
-                            <em>2차전지에 대한 전문 교육을 통해<br/>현장 맞춤형 인력 배출</em>
+                            <em>2차전지에 대한 전문 교육을 통해<br />현장 맞춤형 인력 배출</em>
                             <span>고객 또는 내부인력에 대하여 Battery Academy 기획을 통한 운영전략을 수립</span>
                         </p>
                     </li>
                     <li class="ready scroll_box">
                         <strong class="count">02</strong>
                         <p class="txt">
-                            2차전지의 직무수준별 특화된<br/>
-                            <em>표준교육과정을 개발하고 운용할<br/>
+                            2차전지의 직무수준별 특화된<br />
+                            <em>표준교육과정을 개발하고 운용할<br />
                                 교육 운영관리 시스템 구축</em>
                         </p>
                     </li>
@@ -119,23 +121,23 @@
                         <p class="txt">
                             <em>교육과정 개발</em>
                             <span>
-                                #산업별 맞춤형 표준교육과정 개발<br/>
-                            #특화교육과정<br/>
-                            #산업현장에서 요구하는 통합교육과정
-                            </span>
+                                    #산업별 맞춤형 표준교육과정 개발<br />
+                                    #특화교육과정<br />
+                                    #산업현장에서 요구하는 통합교육과정
+                                </span>
                         </p>
                     </li>
                     <li class="ready scroll_box">
                         <strong class="count">04</strong>
                         <p class="txt">
                             <em>교육시스템 구축·운영</em>
-                            <span>#공간·시스템·강사 등 Academy 인프라 확보·운영<br/>#플랫폼 활용한 2차전지 생산교육</span>
+                            <span>#공간·시스템·강사 등 Academy 인프라 확보·운영<br />#플랫폼 활용한 2차전지 생산교육</span>
                         </p>
                     </li>
                     <li class="ready scroll_box">
                         <h5>
-                            Battery Academy 표준교육과정 및<br/>교육운영시스템 구축 ·<br/>
-                            <em>현장에 투입할 인력 양성을 위한 인프라를<br/>만드는 것이 최종 목표입니다</em>
+                            Battery Academy 표준교육과정 및<br />교육운영시스템 구축 ·<br />
+                            <em>현장에 투입할 인력 양성을 위한 인프라를<br />만드는 것이 최종 목표입니다</em>
                         </h5>
                     </li>
                 </ul>
@@ -169,28 +171,36 @@
     const sectionList = document.getElementsByClassName('scroll_box');
     let currentIdx = 0;
 
-    const animateSection = function() {
+    const contentsBox = document.getElementsByClassName('academy_box')[0];
+    window.addEventListener('scroll', () => {
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollY >= 400 && !contentsBox?.classList.contains('active')) {
+            contentsBox?.classList?.add('active');
+        } else if (scrollY < 400 && contentsBox?.classList.contains('active')) {
+            contentsBox?.classList?.remove('active');
+        }
+    });
+
+    const animateSection = function () {
         const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
         const startPoint = scrollPos + WINDOW_HEIGHT * 0.9;
 
-        for(let i=0; i < sectionList.length; i++) {
+        for (let i = 0; i < sectionList.length; i++) {
             const currentSection = sectionList[i];
             currentIdx = i;
-            if(currentSection.offsetTop < startPoint) {
+            if (currentSection.offsetTop < startPoint) {
                 sectionList[currentIdx].classList.remove('ready');
                 sectionList[currentIdx].classList.add('animate');
             }
         }
     };
-    (function(){
-        var Scroll = function(){
-
-            console.log(sectionList);
+    (function () {
+        var Scroll = function () {
             return {
-                init : function (){
+                init: function () {
                     this.animateEvent();
                 },
-                animateEvent : function() {
+                animateEvent: function () {
                     window.addEventListener('load', animateSection);
                     window.addEventListener('scroll', animateSection);
                 }
@@ -201,4 +211,5 @@
     })();
 </script>
 </body>
+
 </html>
