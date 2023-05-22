@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>
+    <div class="inner">
+        <a href="" class="logo">
+            <span class="blind">로고</span>
+        </a>
+        <div class="top_btn">
+            <button type="button" class="icon">
+                <span class="blind">아이콘</span>
+            </button>
+            <button type="button" class="menu" id="btn_open">
+                <span class="blind">메뉴</span>
+            </button>
+        </div>
+    </div>
+    <div class="nav_detail">
+        <div class="nav_box">
+            <button type="button" id="btn_close" class="btn_close">
+                <span class="blind">닫기</span>
+            </button>
+            <ul class="menu">
+                <li>
+                    <p>BUSINESS</p>
+                    <div class="active_none">
+                        <a href="">토탈솔루션</a>
+                        <a href="">설비제조</a>
+                        <a href="">교육&Battery Academy</a>
+                        <a href="">셀개발</a>
+                    </div>
+                </li>
+                <li>
+                    <p>PRODUCT</p>
+                    <div class="active_none">
+                        <a href="">전극</a>
+                        <a href="">원형</a>
+                        <a href="">파우치형</a>
+                        <a href="">각형</a>
+                    </div>
+                </li>
+                <li>
+                    <p>COMPANY</p>
+                    <div class="active_none">
+                        <a href="">회사소개</a>
+                        <a href="">CEO 인사말</a>
+                        <a href="">레퍼런스</a>
+                        <a href="">글로벌 클라이언트</a>
+                        <a href="">뉴스룸</a>
+                    </div>
+                </li>
+                <li>
+                    <p>CAREER</p>
+                    <div class="active_none">
+                        <a href="">인재상</a>
+                        <a href="">직무소개</a>
+                        <a href="">복리후생</a>
+                        <a href="">채용안내</a>
+                    </div>
+                </li>
+                <li>
+                    <p>CONTACT</p>
+                    <div class="active_none">
+                        <a href="">문의하기</a>
+                        <a href="">오시는길</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="wrap">
+    <section class="top_box business02">
+        <div class="top_txt">
+            <h2 class="tit">EQUIPMENT<br/>MANUFACTURING</h2>
+            <p class="txt">
+                고객이 요구하는 2차전지를 사양 및 종류별로<br/>
+                설비설계와 설비제조가 가능합니다
+            </p>
+        </div>
+    </section>
+    <section class="contents_box">
+        <div class="navigation">
+            <div class="inner">
+                <a href="" class="link">HOME</a>
+                <a href="" class="link">BUSINESS</a>
+                <a href="" class="link">설비제조</a>
+            </div>
+        </div>
+        <div class="business_con">
+            <div class="inner">
+                <div class="tit ready scroll_box">
+                    고객이 원하는 Battery 사양과 종류별로 설비를 설계하며<br/>
+                    설비 제조에 대하여 제안합니다
+                </div>
+            </div>
+        </div>
+        <div class="step_box">
+            <div class="box">
+                <div class="img ready scroll_box">
+                    <img src="./img/bg_step01.png" alt="">
+                </div>
+                <div class="box_txt  ready scroll_box">
+                    <h3>Line별 설비</h3>
+                    <ul>
+                        <li>R&D Line</li>
+                        <li>Factory Line</li>
+                        <li>Pilot Line</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img ready scroll_box">
+                    <img src="./img/bg_step02.png" alt="">
+                </div>
+                <div class="box_txt ready scroll_box">
+                    <h3>Cell별 설비</h3>
+                    <ul>
+                        <li>Pouch Cell</li>
+                        <li>Prismatic Cell</li><br/>
+                        <li>Cylindrical Cell</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img ready scroll_box">
+                    <img src="./img/bg_step03.png" alt="">
+                </div>
+                <div class="box_txt ready scroll_box">
+                    <h3>Electrode 및 Cell 개발 Line</h3>
+                    <ul>
+                        <li>Pouch Cell(LIB, ASSB, LMB)</li><br/>
+                        <li>Prismatic Cell</li><br/>
+                        <li> Cylindrical Cell(18650,21700,26650,32700,4680)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="btm  ready scroll_box">
+            <button type="button" class="more">
+                생산 설비 보기
+            </button>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="company_nav">
+        <ul class="list">
+            <li>
+                <a href="" class="link">회사소개</a>
+            </li>
+            <li>
+                <a href="" class="link">개인정보처리방침</a>
+            </li>
+            <li>
+                <a href="" class="link">문의하기</a>
+            </li>
+        </ul>
+    </div>
+    <div class="copyright">
+        <p>2023 ⓒ ENERGYTECHSOLUTION CORP.</p>
+    </div>
+</footer>
+
+<script src="./js/index.js"></script>
+<script>
+    const WINDOW_HEIGHT = window.innerHeight;
+    const sectionList = document.getElementsByClassName('scroll_box');
+    let currentIdx = 0;
+
+    const animateSection = function() {
+        console.log(1);
+        const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+        const startPoint = scrollPos + WINDOW_HEIGHT * 0.9;
+
+        for(let i=0; i < sectionList.length; i++) {
+            const currentSection = sectionList[i];
+            currentIdx = i;
+            if(currentSection.offsetTop < startPoint) {
+                sectionList[currentIdx].classList.remove('ready');
+                sectionList[currentIdx].classList.add('animate');
+            }
+        }
+    };
+    (function(){
+        var Scroll = function(){
+
+            console.log(sectionList);
+            return {
+                init : function (){
+                    this.animateEvent();
+                },
+                animateEvent : function() {
+                    window.addEventListener('load', animateSection);
+                    window.addEventListener('scroll', animateSection);
+                }
+            }
+        };
+        var scroll = new Scroll();
+        scroll.init();
+    })();
+</script>
+</body>
+</html>
