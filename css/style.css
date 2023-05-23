@@ -336,9 +336,8 @@ body:not(.section1) .contact_floating {opacity:1}
 /* Nav Detail */
 .nav_detail {width:100%;height:100%;visibility:hidden}
 .nav_detail.active {display:block;transition: 0.2s all;visibility:visible}
-.nav_detail:before {position:fixed;top:0;left:0;display:block;width:100%;height:100%;background:#000;opacity:0.9;content:''}
-.nav_detail .nav_box {position:absolute;top:0;right:0;width:60vw;height:100vh;background:#fff;transition: 0.2s all}
-.nav_detail .btn_close {position:absolute;top:105px;right:10px;width:30px;height:30px;background:url('./../img/bg_nav_close.png') center / 16px no-repeat}
+.nav_detail .nav_box {position:absolute;top:0;right:0;width:230px;height:100vh;background:#fff;transition: 0.2s all;z-index:1400}
+.nav_detail .btn_close {position:absolute;top:70px;right:10px;width:30px;height:30px;background:url('./../img/bg_nav_close.png') center / 16px no-repeat}
 .nav_detail .menu {margin-top:50%;border-top:1px solid #222;border-bottom:1px solid #222}
 .nav_detail .menu li+li {border-top:1px solid #ddd}
 .nav_detail .menu li p {padding:23px;color:#222;font-size:17px;font-family:'Pretendard-Bold';line-height:20px}
@@ -350,7 +349,10 @@ body:not(.section1) .contact_floating {opacity:1}
 .nav_detail .menu li .active_none {display:none}
 .nav_detail .menu li .menu_open.active+.active_none {display:block;padding:23px;background:#397cff}
 .nav_detail .nav_box {animation-name:fadeRight;animation-duration:0.5s;animation-play-state:running;animation-fill-mode:both}
-.nav_detail.active .nav_box {animation-name:fadeLeft;animation-duration:0.5s;animation-play-state:running;animation-fill-mode:both}
+.nav_detail.active .nav_box {animation-name:fadeLeft;animation-duration:0.5s;animation-play-state:running;animation-fill-mode:both;z-index:1400}
+
+.dimmed {position:fixed;top:0;left:0;display:none;width:100%;height:100%;background:#000;opacity:0.9;z-index:1200;content:''}
+.dimmed.active {display:block}
 
 .business_con {padding:20px 10px}
 .business_con .tit {color:#222;font-size:14px;line-height:22px}
@@ -370,6 +372,11 @@ body:not(.section1) .contact_floating {opacity:1}
 .business_con .academy_box li:nth-child(4) {padding-bottom:44px}
 .business_con .academy_box li:last-child {position:relative;margin-top:100px;padding:0;border:none;background:none}
 .business03+.contents_box .business_con {padding:30px 10px}
+.business03+.contents_box .business_con.active {background:url('./../img/bg_business_change.png') center / 100% no-repeat}
+.business03+.contents_box .business_con.active .academy_box li {background:#27303e}
+.business03+.contents_box .business_con.active .academy_box li h5:after {opacity:0.5;background:url('./../img/bg_step04_change.png')  center / 190px 142px no-repeat}
+.business03+.contents_box .business_con.active .academy_box li .txt {color:#fff}
+.business03+.contents_box .business_con.active .academy_box li .count {color:#dddddd29}
 
 .cell_box {border-top:1px solid #0a111e}
 .cell_box li+li {border-top:1px solid #ddd}
@@ -402,8 +409,12 @@ body:not(.section1) .contact_floating {opacity:1}
 .product_con .tit em {font-family:'Pretendard-Bold'}
 .product_con .tit strong {color:#397cff;font-family:'Pretendard-Bold'}
 .product_con .tit h3 .badge {display:flex;align-items:center;justify-content:center;margin-right:5px;width:31px;height:15px;color:#fff;font-size:9px;line-height:23px;border-radius:2px;font-family: 'Pretendard-Light';background:#3984ff;box-sizing:border-box}
-.product_con .product_search {margin:20px 50px 0}
+.product_con .product_search {margin:20px 50px 0;transition: 0.2s all}
 .product_con .product_search .search_input {padding:8px 30px 8px 0;width:100%;color:#999;font-size:16px;border:none;border-bottom:1px solid #397cff;background:url('./../img/ico_search2.png') right / 14px 13px no-repeat;box-sizing:border-box}
+.product_con .product_search .search_input:focus {outline:none}
+.product_con .product_search.active {margin:0;padding:20px 50px;background:#397cff}
+.product_con .product_search.active .search_input {color:#fff;border-bottom:1px solid #fff;background:url('./../img/ico_search3.png') right / 14px 13px no-repeat}
+.product_con .product_search.active .search_input::placeholder {color:#fff}
 .product_con .product_tab {display:flex;justify-content:center}
 .product_con .product_tab li+li {margin-left:10px}
 .product_con .product_tab li .tab {text-align:center}

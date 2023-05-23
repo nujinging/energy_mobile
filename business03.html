@@ -78,6 +78,7 @@
             </ul>
         </div>
     </div>
+    <div id="dimmed"class="dimmed"></div>
 </header>
 
 <div class="wrap">
@@ -171,7 +172,7 @@
     const sectionList = document.getElementsByClassName('scroll_box');
     let currentIdx = 0;
 
-    const contentsBox = document.getElementsByClassName('academy_box')[0];
+    const contentsBox = document.getElementsByClassName('business_con')[0];
     window.addEventListener('scroll', () => {
         const scrollY = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollY >= 400 && !contentsBox?.classList.contains('active')) {

@@ -98,7 +98,7 @@
         <div class="product_con">
             <div class="inner">
                 <div class="product_search">
-                    <input type="text" class="search_input" placeholder="검색어를 입력해주세요">
+                    <input type="text" class="search_input" placeholder="검색어를 입력해주세요" id="searchInput">
                 </div>
                 <ul class="product_tab">
                    <li class="on">
@@ -242,5 +242,14 @@
 </footer>
 
 <script src="./js/index.js"></script>
+<script>
+    const input = document.getElementById('searchInput');
+    input.addEventListener('focus', function(e) {
+        e.target.parentNode.classList.add('active');
+    });
+    input.addEventListener('blur', function(e) {
+        e.target.parentNode.classList.remove('active');
+    });
+</script>
 </body>
 </html>

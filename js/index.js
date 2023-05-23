@@ -13,12 +13,21 @@ window.addEventListener('scroll',() => {
 
 document.getElementById("btn_open").onclick = function () {
     document.querySelector(".nav_detail").classList.add('active')
+    document.querySelector(".dimmed").classList.add('active')
 };
 
 
 document.getElementById("btn_close").onclick = function () {
     document.querySelector(".nav_detail").classList.remove('active')
+    document.querySelector(".dimmed").classList.remove('active')
 };
+
+document.getElementById("dimmed").onclick = function () {
+    document.querySelector(".nav_detail").classList.remove('active')
+    document.querySelector(".dimmed").classList.remove('active')
+};
+
+
 
 document.getElementById("career_job").addEventListener("mouseover", mouseOverJob);
 
