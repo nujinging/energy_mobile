@@ -154,9 +154,6 @@ header .nav_all .list .link.link_sub {margin:10px 0;line-height:20px}
 
 
 
-.scroll_box {display:none}
-.scroll_box.animate {display:block}
-
 /* 텍스트 */
 .main_tit {flex-shrink:0}
 .main_tit .tit {color:#222;font-size:50px;font-family:'Pretendard-Bold';line-height:65px}
@@ -642,7 +639,7 @@ footer .copyright {margin-top:12px;color:#bfc0c0;font-size:12px;text-align:cente
 .contact_desc li:nth-child(4) strong:before {width:56px;background:url('./../img/img_contact04.png') no-repeat}
 
 
-.ready {visibility:hidden;-webkit-animation-play-state:paused;animation-play-state:paused}
+.scroll_box {visibility:hidden;-webkit-animation-play-state:paused;animation-play-state:paused}
 .animate {display:block;visibility:visible;animation-name:fadeInUp;animation-duration:0.5s;animation-play-state:running;animation-fill-mode:both}
 .animate:nth-child(1) {-webkit-animation-delay:0.2s;animation-delay:0.2s}
 .animate:nth-child(2) {-webkit-animation-delay:0.4s;animation-delay:0.4s}
