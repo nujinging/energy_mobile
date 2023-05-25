@@ -51,6 +51,8 @@ var swiper5 = new Swiper(".slide_tab", {
     slidesPerView: "auto",
     freeMode: true,
     watchSlidesProgress: true,
+    observer:true,
+    observeParents:true,
 });
 var swiper6 = new Swiper(".slide_con", {
     spaceBetween: 30,
@@ -65,18 +67,22 @@ var swiper6 = new Swiper(".slide_con", {
     thumbs: {
         swiper: swiper5,
     },
+    observer:true,
+    observeParents:true,
 });
 
 
 
 
-var swiper = new Swiper(".mySwiper", {
+var swiper2 = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     spaceBetween: 30,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
     },
+    observer:true,
+    observeParents:true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

@@ -125,10 +125,10 @@ header .nav li .link {font-size:14px;background-position:-29px 10px}
 
 
 header.main {position:fixed;border:none;background:none}
-header.main .logo  {background:url('./../img/logo_active_white.png') no-repeat;}
+header.main .logo  {background:url('./../img/logo_active_white.png') center / 204px 24px no-repeat}
 header.main .top_btn .icon {background-position:1px 3px}
 header.main.active {background:#fff}
-header.main.active .logo {background:url('./../img/logo_active.png') no-repeat;}
+header.main.active .logo {background:url('./../img/logo_active.png')  center / 204px 24px no-repeat;}
 header.main.active .top_btn .icon {background-position:-25px 3px}
 header.main .top_btn .menu {background:url('./../img/ico_menu_white.png') center / 20px 14px no-repeat}
 header.main.active .top_btn .menu {background:url('./../img/ico_menu.png') center / 20px 14px no-repeat}
@@ -224,7 +224,7 @@ body:not(.section1) .contact_floating {opacity:1}
 #section2 {padding:30px 10px 60px;background:#fff}
 .wrap_business .main_tit .txt strong {color:#222}
 .wrap_business .business_slide {position:relative;margin-top:20px}
-.wrap_business .business_slide .item {width:257px;border-radius:14px;box-shadow:0 0 5px 0 rgba(0, 0, 0, 0.2)}
+.wrap_business .business_slide .item {width:300px;height:462px;border-radius:14px;box-shadow:0 0 5px 0 rgba(0, 0, 0, 0.2)}
 .wrap_business .business_slide .item img {width:100%;vertical-align:top}
 .wrap_business .business_slide .item .txt {padding:18px 20px;vertical-align:top}
 .wrap_business .business_slide .item .txt strong {color:#397cff;font-size:18px;font-family:'Pretendard-Bold';line-height:20px;vertical-align:top}
@@ -289,8 +289,8 @@ body:not(.section1) .contact_floating {opacity:1}
 .wrap_career {padding-top:30px}
 .wrap_career .inner .career_box {}
 
-#section7 {background:#0a1524 url('./../img/bg_section06.png') center / 100% 100% no-repeat}
-.wrap_contact {padding:30px 10px 60px;background:#0a1524}
+#section7 {background:#0a1524 url('./../img/bg_contact.png') left bottom / 100% 100% no-repeat}
+.wrap_contact {padding:30px 10px 60px}
 .wrap_contact .main_tit .tit,
 .wrap_contact .main_tit .txt {color:#fff}
 .wrap_contact .contact_box {margin-top:20px}
@@ -301,8 +301,8 @@ body:not(.section1) .contact_floating {opacity:1}
 .wrap_contact .contact_box .input_box input {margin-left:22px;color:#fff;font-size:14px;line-height:23px;border:none;background:none;}
 .wrap_contact .contact_box .input_box input::placeholder {color:#54585f}
 .wrap_contact .contact_box .input_box input:focus {outline:none}
-.wrap_contact .contact_box .input_box.text_box {display:block;width:100%;height:150px;background:#1c2634}
-.wrap_contact .contact_box .input_box.text_box textarea {width:100%;height:100%;border:none;background:#1c2634;resize:none;box-sizing:border-box}
+.wrap_contact .contact_box .input_box.text_box {display:block;width:100%;height:150px;background:#1c2634a3}
+.wrap_contact .contact_box .input_box.text_box textarea {width:100%;height:100%;border:none;background:none;resize:none;box-sizing:border-box}
 .wrap_contact .contact_box .input_box.text_box textarea:focus {outline:none}
 .wrap_contact .check_box {margin-top:20px}
 .wrap_contact .check_box label {color:#fff;font-size:12px;line-height:13px}
@@ -366,13 +366,13 @@ body:not(.section1) .contact_floating {opacity:1}
 .business_con .academy_box li .txt {color:#222;font-size:14px;line-height:19px;text-align:left;font-family:'Pretendard-Light'}
 .business_con .academy_box li .txt em {font-family:'Pretendard-Bold'}
 .business_con .academy_box li span {display:block;margin-top:8px;font-size:14px;line-height:17px;font-family:'Pretendard-Light'}
-.business_con .academy_box li h5 {margin:0 auto;padding:10px 0;width:100%;color:#fff;font-size:14px;line-height:20px;text-align:center;z-index:1;background:url('./../img/bg_business_last.png') center / 100% 100px no-repeat;font-family:'Pretendard-Light'}
+.business_con .academy_box li h5 {display:flex;flex-wrap:wrap;justify-content:center;flex-direction:column;height:112px;margin:0 auto;width:100%;color:#fff;font-size:14px;line-height:20px;text-align:center;z-index:1;background:url('./../img/bg_business_last.png') center / 100% 112fpx no-repeat;font-family:'Pretendard-Light'}
 .business_con .academy_box li h5:after {position:absolute;left:50%;bottom:40px;width:190px;height:142px;background:url('./../img/bg_step04.png')  center / 190px 142px no-repeat;transform:translate(-50%, -50%);content:''}
 .business_con .academy_box li h5 em {font-family:'Pretendard-Bold'}
 .business_con .academy_box li:nth-child(4) {padding-bottom:44px}
-.business_con .academy_box li:last-child {position:relative;margin-top:100px;padding:0;border:none;background:none}
+.business_con .academy_box li:last-child {position:relative;margin-top:100px;padding:0;height:112px;border:none;background:none}
 .business03+.contents_box .business_con {padding:30px 10px}
-.business03+.contents_box .business_con.active {background:url('./../img/bg_business_change.png') center / 100% no-repeat}
+.business03+.contents_box .business_con.active {background:url('./../img/bg_business_change.png') center / 100% 100% no-repeat}
 .business03+.contents_box .business_con.active .academy_box li {background:#27303e}
 .business03+.contents_box .business_con.active .academy_box li h5:after {opacity:0.5;background:url('./../img/bg_step04_change.png')  center / 190px 142px no-repeat}
 .business03+.contents_box .business_con.active .academy_box li .txt {color:#fff}
@@ -385,7 +385,7 @@ body:not(.section1) .contact_floating {opacity:1}
 .cell_box .box .box_con .box_desc {margin-top:4px;color:#222;text-align:left}
 .cell_box .box .box_con .box_desc h5 {font-size:16px;line-height:17px;font-family:'Pretendard-Bold'}
 .cell_box .box .box_con .box_desc p {display:none;margin-top:20px;font-size:14px;line-height:20px;font-family:'Pretendard-Light'}
-.cell_box .box .box_con .box_more {position:absolute;top:30px;right:30px;display:block;width:30px;height:30px;background:url('./../img/ico_business.png') 0 0 no-repeat}
+.cell_box .box .box_con .box_more {position:absolute;top:47px;right:30px;display:block;width:30px;height:30px;background:url('./../img/ico_business.png') 0 0 no-repeat}
 .cell_box .box .box_con.active {background:#f1f3f4}
 .cell_box .box .box_con.active strong {color:#3c73f9}
 .cell_box .box .box_con.active .box_desc p {display:block}
@@ -393,7 +393,7 @@ body:not(.section1) .contact_floating {opacity:1}
 
 .step_box {margin-bottom:40px;overflow:hidden}
 .step_box .box+.box {margin-top:30px}
-.step_box .box .img {height:130px;overflow:hidden}
+.step_box .box .img {height:180px;overflow:hidden}
 .step_box .box .img img {position:relative;width:100%;z-index:2}
 .step_box .box .box_txt {position:relative;margin-top:12px;margin-left:40px;width:100%;text-align:left}
 .step_box .box .box_txt:before {position:absolute;top:-12px;left:-20px;width:1px;height:160px;background:#ccc;content:''}
@@ -409,12 +409,11 @@ body:not(.section1) .contact_floating {opacity:1}
 .product_con .tit em {font-family:'Pretendard-Bold'}
 .product_con .tit strong {color:#397cff;font-family:'Pretendard-Bold'}
 .product_con .tit h3 .badge {display:flex;align-items:center;justify-content:center;margin-right:5px;width:31px;height:15px;color:#fff;font-size:9px;line-height:23px;border-radius:2px;font-family: 'Pretendard-Light';background:#3984ff;box-sizing:border-box}
-.product_con .product_search {margin:20px 50px 0;transition: 0.2s all}
+.product_con .product_search {padding:20px 50px;background:#397cff;transition: 0.2s all}
 .product_con .product_search .search_input {padding:8px 30px 8px 0;width:100%;color:#999;font-size:16px;border:none;border-bottom:1px solid #397cff;background:url('./../img/ico_search2.png') right / 14px 13px no-repeat;box-sizing:border-box}
 .product_con .product_search .search_input:focus {outline:none}
-.product_con .product_search.active {margin:0;padding:20px 50px;background:#397cff}
-.product_con .product_search.active .search_input {color:#fff;border-bottom:1px solid #fff;background:url('./../img/ico_search3.png') right / 14px 13px no-repeat}
-.product_con .product_search.active .search_input::placeholder {color:#fff}
+.product_con .product_search .search_input {color:#fff;border-bottom:1px solid #fff;background:url('./../img/ico_search3.png') right / 14px 13px no-repeat}
+.product_con .product_search .search_input::placeholder {color:#fff}
 .product_con .product_tab {display:flex;justify-content:center}
 .product_con .product_tab li+li {margin-left:10px}
 .product_con .product_tab li .tab {text-align:center}
