@@ -416,9 +416,31 @@
             el: ".swiper-pagination",
             clickable: true,
         },
-        observer:true,
-        observeParents:true,
     });
+
+    /*** 프로덕트**/
+    var slide_tab = new Swiper(".slide_tab", {
+        slidesPerView: "auto",
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var slide_con = new Swiper(".slide_con", {
+        spaceBetween: 30,
+        pagination: {
+            el: ".slide_circle",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper5,
+        },
+    });
+
+
+
     const WINDOW_HEIGHT = window.innerHeight;
     const sectionList = document.getElementsByClassName('scroll_box');
     let currentIdx = 0;
