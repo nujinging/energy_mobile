@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/swiper.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
 <header id="header" class="main">
@@ -416,9 +417,6 @@
             el: ".swiper-pagination",
             clickable: true,
         },
-        observer:true,
-        observeParents:true,
-        resistance : false,
     });
     const WINDOW_HEIGHT = window.innerHeight;
     const sectionList = document.getElementsByClassName('scroll_box');
