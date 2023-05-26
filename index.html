@@ -418,27 +418,6 @@
         },
     });
 
-    /*** 프로덕트**/
-    var slide_tab = new Swiper(".slide_tab", {
-        slidesPerView: "auto",
-        freeMode: true,
-        watchSlidesProgress: true,
-    });
-    var slide_con = new Swiper(".slide_con", {
-        spaceBetween: 30,
-        pagination: {
-            el: ".slide_circle",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-            swiper: slide_tab,
-        },
-    });
-
 
 
     const WINDOW_HEIGHT = window.innerHeight;
