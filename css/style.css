@@ -128,7 +128,7 @@ header.main {position:fixed;border:none;background:none}
 header.main .logo  {background:url('./../img/logo_active_white.png') center / 204px 24px no-repeat}
 header.main .top_btn .icon {background-position:1px 3px}
 header.main.active {background:#fff}
-header.main.active .logo {background:url('./../img/logo_active.png')  center no-repeat;}
+header.main.active .logo {background:url('./../img/logo_active.png') center / 204px 24px no-repeat;}
 header.main.active .top_btn .icon {background-position:-25px 3px}
 header.main .top_btn .menu {background:url('./../img/ico_menu_white.png') center / 20px 14px no-repeat}
 header.main.active .top_btn .menu {background:url('./../img/ico_menu.png') center / 20px 14px no-repeat}
@@ -221,18 +221,17 @@ body:not(.section1) .contact_floating {opacity:1}
 
 #section2 {padding:30px 10px 60px;background:#fff}
 .wrap_business .main_tit .txt strong {color:#222}
-.wrap_business .business_slide {position:relative;margin-top:20px}
+.wrap_business .business_slide {position:relative;margin-top:20px;padding-bottom:50px}
 .wrap_business .business_slide .item {width:300px;height:462px;border-radius:14px;box-shadow:0 0 5px 0 rgba(0, 0, 0, 0.2)}
 .wrap_business .business_slide .item img {width:100%;vertical-align:top}
 .wrap_business .business_slide .item .txt {padding:18px 20px;vertical-align:top}
 .wrap_business .business_slide .item .txt strong {color:#397cff;font-size:18px;font-family:'Pretendard-Bold';line-height:20px;vertical-align:top}
 .wrap_business .business_slide .item .txt p {margin-top:10px;padding-top:15px;color:#222;font-size:14px;line-height:20px;border-top:1px solid #e7e7e7}
-.wrap_business .business_slide .swiper-pagination {bottom:-30px}
+.wrap_business .business_slide .swiper-pagination {bottom:0;text-align:left}
 .wrap_business .swiper-pagination-bullet+.swiper-pagination-bullet,
 .wrap_business .swiper-pagination-bullet+.swiper-pagination-bullet-active {margin-left:4px}
 .wrap_business .swiper-pagination-bullet-active {width:15px;border-radius:8px}
-
-
+.swiper-button-next:after, .swiper-button-prev:after {content:none}
 
 #section3 {background:url('./../img/bg_section02.png') center / 100% 100% no-repeat}
 
