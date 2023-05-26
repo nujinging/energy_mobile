@@ -44,6 +44,34 @@ function mouseOverTalent() {
 }
 
 
+/**
+ * 스와이프 이벤트
+ **/
+var swiper5 = new Swiper(".slide_tab", {
+    slidesPerView: "auto",
+    freeMode: true,
+    watchSlidesProgress: true,
+    observer:true,
+    observeParents:true,
+});
+var swiper6 = new Swiper(".slide_con", {
+    spaceBetween: 30,
+    pagination: {
+        el: ".slide_circle",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiper5,
+    },
+    observer:true,
+    observeParents:true,
+});
+
+
 
 history.scrollRestoration = "manual";
 
