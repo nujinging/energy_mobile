@@ -43,7 +43,51 @@ function mouseOverTalent() {
     document.getElementById("career_job").classList.remove('active')
 }
 
+    const animateSection = function() {
+        const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+        const startPoint = scrollPos + WINDOW_HEIGHT * 0.9;
 
+        for(let i=0; i < sectionList.length; i++) {
+            const currentSection = sectionList[i];
+            currentIdx = i;
+            if(currentSection.offsetTop < startPoint) {
+                sectionList[currentIdx].classList.remove('ready');
+                sectionList[currentIdx].classList.add('animate');
+            }
+        }
+    };
+    (function(){
+        var Scroll = function(){
+
+            console.log(sectionList);
+            return {
+                init : function (){
+                    this.animateEvent();
+                },
+                animateEvent : function() {
+                    window.addEventListener('load', animateSection);
+                    window.addEventListener('scroll', animateSection);
+                }
+            }
+        };
+        var scroll = new Scroll();
+        scroll.init();
+    })();
+
+
+    let previewImg = document.querySelectorAll(".menu_open");
+    previewImg.forEach(child => {
+        child.addEventListener('click', function (event) {
+            if (false) {
+                this.classList.remove('active');
+            } else {
+                previewImg.forEach(active2 => {
+                    active2.classList.remove('active')
+                })
+                this.classList.add('active');
+            }
+        });
+    })
 /**
  * 스와이프 이벤트
  **/
@@ -66,8 +110,6 @@ var slide_con = new Swiper(".slide_con", {
         swiper: slide_tab,
     },
 });
-
-
 
 history.scrollRestoration = "manual";
 
